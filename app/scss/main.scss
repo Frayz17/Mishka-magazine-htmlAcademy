@@ -1,0 +1,258 @@
+
+
+
+$white: #ffffff;
+$black: #000000;
+$lightGrey: #ececec;
+$turquoise: #63d1b2;
+$darkTurquoise: #56c3b2;
+
+body {
+	font-family: verdana;
+}
+
+a {
+	color: inherit;
+	text-decoration: none;
+}
+
+.container {
+	padding: 0 30px;
+}
+
+
+
+// ==============================================
+// ========== navigation panel section ==========
+.navigationPanel {	
+	font-family: verdana, arial, sans-serif;
+	font-size: 16px;
+	line-height: 24px;
+	font-weight: bold;
+
+	.navigationPanel-logoToogleBox {
+		border-bottom: 1px solid $lightGrey;
+	}
+
+	.navigationPanel-toogle {
+		box-sizing: border-box;
+		position: relative;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		min-height: 80px;
+		padding: 0 30px;
+		
+		// ---------- hamburger styling ----------
+		.hamburger {
+			position: absolute;
+			right: 30px;
+			display: inline-block;
+	    cursor: pointer;
+
+			.hamburger-barBox {
+				box-sizing: border-box;
+				position: relative;
+				width: 20px;
+				min-height: 14px;
+			}
+			.bar1,
+			.bar2,
+			.bar3 {
+				position: absolute;
+				width: 20px;
+				height: 2px;
+				background-color: #000000;
+				transition: 0.2s;
+			}
+
+			.hamburger-barBox  .bar1 {
+			  top: 0px;
+			  -webkit-transform-origin: left center;
+			  -moz-transform-origin: left center;
+			  -o-transform-origin: left center;
+			  transform-origin: left center;
+			}
+			.hamburger-barBox  .bar2 {
+			  top: 6px;
+			  -webkit-transform-origin: left center;
+			  -moz-transform-origin: left center;
+			  -o-transform-origin: left center;
+			  transform-origin: left center;
+			}
+			.hamburger-barBox  .bar3 {
+			  top: 12px;
+			  -webkit-transform-origin: left center;
+			  -moz-transform-origin: left center;
+			  -o-transform-origin: left center;
+			  transform-origin: left center;
+			}
+
+			.hamburger-barBox.open .bar1 {
+			  -webkit-transform: rotate(45deg);
+			  -moz-transform: rotate(45deg);
+			  -o-transform: rotate(45deg);
+			  transform: rotate(45deg);
+			  top: -2px;
+			  left: 0px;
+			}
+			.hamburger-barBox.open .bar2 {
+			  width: 0%;
+			  opacity: 0;
+			}
+			.hamburger-barBox.open .bar3 {
+			  -webkit-transform: rotate(-45deg);
+			  -moz-transform: rotate(-45deg);
+			  -o-transform: rotate(-45deg);
+			  transform: rotate(-45deg);
+			  top: 12px;
+			  left: 0px;
+			}
+		} // ---------- end hamburger styling ----------
+
+	}
+
+	// ---------- navigation panel styling ----------
+	.navigationPanel-navigation {
+		overflow: hidden;
+
+		ul {
+			display: flex;
+			box-sizing: border-box;
+			position: relative;
+			display: flex;
+			flex-flow: column;
+			align-items: center;
+			justify-content: center;
+			padding: 0;
+			margin: 0;
+		}
+
+		li {
+			display: flex;
+			flex-flow: column;
+			justify-content: center;
+			align-items: canter;
+			width: 100%;
+			border-bottom: 1px solid $lightGrey;
+			min-height: 80px;
+
+			p {
+				position: relative;
+				padding-left: 60px;
+				padding-right: 30px;
+				max-width: 200px;
+  			margin: 0 auto;
+			}
+
+			.navigationPanel-navigation-search::before {
+				content: url("../img/navigationPanel/search.png");
+				position: absolute;
+				top: 4px;
+				left: 15px;
+			}
+			.navigationPanel-navigation-cart::before {
+				content: url("../img/navigationPanel/cart.png");
+				position: absolute;
+				top: 4px;
+				left: 15px;
+			}
+		}
+	}
+	li:hover {
+		opacity: 0.6;
+		.navigationPanel-navigation-search::before {
+			content: url("../img/navigationPanel/search_hvr.png");
+		}
+		.navigationPanel-navigation-cart::before {
+			content: url("../img/navigationPanel/cart_hvr.png");
+		}
+	}
+	li:active {
+		opacity: 0.3;
+		.navigationPanel-navigation-search::before {
+			content: url("../img/navigationPanel/search_hvr.png");
+		}
+		.navigationPanel-navigation-cart::before {
+			content: url("../img/navigationPanel/cart_hvr.png");
+		}
+	}
+
+	.hidden {
+		display: none;
+	} // ---------- end navigation panel styling ----------
+} // ========== end navigation panel section ==========
+
+
+
+// ==============================================
+// ========== navigation panel section ==========
+.handMade {
+	background-color: $lightGrey;
+	background-image: url("../img/handmade/bg_mobile.jpg");
+	background-repeat: no-repeat;
+	background-position: center top;
+
+	.handMade-title {
+		font-size: 24px;
+		line-height: 31px;
+		font-weight: bold;
+		text-align: center;
+		padding: 0 30px;
+		padding-top: 95px;
+		padding-bottom: 125px;
+		margin: 0;
+	}
+
+	.handMadeProduct-productBox {
+		display: flex;
+		flex-flow: column;
+		font-family: tahoma, helvetica, sans-serif;
+		font-size: 18px;
+		line-height: 24px;
+		color: $white;
+	}
+
+	.handMadeProduct-productBox-item {
+		box-sizing: border-box;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		min-height: 104px;
+		padding: 0 30px;
+		h3 {
+			font-size: inherit;
+			line-height: inherit;
+			width: 50%
+		}
+		img {
+			opacity: 0.5;
+		}
+	}
+	.interior {
+		background-color: $turquoise;
+		padding-right: 35px;
+	}
+	.toy {
+		background-color: $darkTurquoise;
+	}
+	.handMadeProduct-productBox-item:hover {
+		img {
+			opacity: 1;
+		}
+	}
+	.handMadeProduct-productBox-item:active {
+		img,
+		h3 {
+			opacity: 0.3;
+		}
+	}
+} // ========== end navigation panel section ==========
+
+
+
+// ==========================================
+// ========== Product Week section ==========
+.productWeek {
+	
+}
