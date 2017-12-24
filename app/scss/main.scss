@@ -4,11 +4,12 @@
 $white: #ffffff;
 $black: #000000;
 $lightGrey: #ececec;
+$darkGrey: #444444;
 $turquoise: #63d1b2;
 $darkTurquoise: #56c3b2;
 
 body {
-	font-family: verdana;
+	font-family: verdana, arial, sans-serif;
 }
 
 a {
@@ -17,7 +18,9 @@ a {
 }
 
 .container {
-	padding: 0 30px;
+	padding: 0 10%;
+	max-width: 575px;
+	margin: 0 auto;
 }
 
 
@@ -29,6 +32,8 @@ a {
 	font-size: 16px;
 	line-height: 24px;
 	font-weight: bold;
+	max-width: 575px;
+	margin: 0 auto;
 
 	.navigationPanel-logoToogleBox {
 		border-bottom: 1px solid $lightGrey;
@@ -41,12 +46,12 @@ a {
 		align-items: center;
 		justify-content: center;
 		min-height: 80px;
-		padding: 0 30px;
+		padding: 0 10%;
 		
 		// ---------- hamburger styling ----------
 		.hamburger {
 			position: absolute;
-			right: 30px;
+			right: 10%;
 			display: inline-block;
 	    cursor: pointer;
 
@@ -192,6 +197,8 @@ a {
 	background-image: url("../img/handmade/bg_mobile.jpg");
 	background-repeat: no-repeat;
 	background-position: center top;
+	max-width: 575px;
+	margin: 0 auto;
 
 	.handMade-title {
 		font-size: 24px;
@@ -219,7 +226,7 @@ a {
 		justify-content: space-between;
 		align-items: center;
 		min-height: 104px;
-		padding: 0 30px;
+		padding: 0 10%;
 		h3 {
 			font-size: inherit;
 			line-height: inherit;
@@ -231,7 +238,7 @@ a {
 	}
 	.interior {
 		background-color: $turquoise;
-		padding-right: 35px;
+		padding-right: 11%;
 	}
 	.toy {
 		background-color: $darkTurquoise;
@@ -254,5 +261,329 @@ a {
 // ==========================================
 // ========== Product Week section ==========
 .productWeek {
-	
+
+	.container {
+		display: flex;
+		flex-flow: column;
+		align-items: center;
+		padding-bottom: 35px;
+		font-family: 'Open Sans', sans-serif;
+		color: $darkGrey;
+	}
+
+	header {
+		padding-top: 30px;
+		font-weight: bold;
+		h2 {
+			margin: 0;
+			font-family: verdana, arial, sans-serif;
+			font-size: 23px;
+			line-height: 30px;
+			color: $black;		
+		}
+		p {
+			margin: 0;
+			margin-top: 10px;
+			font-size: 16px;
+			line-height: 16px;
+			text-transform: uppercase;
+			color: $turquoise;
+		}	
+	}
+
+	.productWeek-description {
+		margin: 0;
+		margin-top: 30px;
+		font-size: 14px;
+		line-height: 24px;
+		color: $darkGrey;
+	}
+
+	// table styling -----------
+	.productWeek-characteristicTable {
+		margin: 0;
+		margin-top: 10px;
+		font-size: 14px;
+		line-height: 20px;
+		color: inherit;
+		width: 100%;
+		border-collapse: collapse; // enable borders for tr
+
+		tr {
+			border-bottom: 1px solid $lightGrey;
+			box-sizing: border-box;
+		}
+		td {
+			padding-bottom: 12px;
+			padding-top: 14px;
+		}
+		td:nth-of-type(2) {
+			padding-left: 10%;
+		}
+
+	} // end table styling -----------
+
+	img {
+		margin-top: 25px;
+		max-width: 100%;
+		align-self: center;
+		min-height: 0; // for save img height proportion
+	}
+
+	.productWeek-order {
+		margin-top: 25px;
+		width: 100%;
+
+		p {
+			margin: 0;
+			text-align: center;
+			font-family: verdana, arial, sans-serif;
+			font-weight: bold;
+			font-size: 16px;
+			line-height: 24px;
+		}
+
+		.productWeek-order-btn {
+			display: block;
+			max-width: 525px;
+			margin: 0 auto;
+			margin-top: 25px;
+			padding-top: 17px;
+			padding-bottom: 17px;
+			text-align: center;
+			border: 2px solid $darkGrey;
+			font-family: 'Open Sans', sans-serif;
+			font-weight: bold;
+			text-transform: uppercase;
+			cursor: pointer;
+		}
+		.productWeek-order-btn:hover {
+			background-color: $darkGrey;
+			color: $white;
+		}
+		.productWeek-order-btn:active {
+			background-color: $darkGrey;
+			color: rgba(255,255,255, 0.3);
+		}
+	}
 }
+.productWeek::after {
+	content: url("../img/zigzagLine.svg");
+	width: 100%;
+} // ========== end Product Week section ==========
+
+
+
+// ===================================
+// ========== about section ==========
+.about {
+	padding-top: 30px;
+
+	h2 {
+		margin: 0;
+		font-size: 24px;
+		font-line: 30px;
+		font-weight: bold;
+	}
+
+	.about-point {
+		margin-top: 35px;
+
+		p {
+			margin: 0;
+			margin-top: 20px;
+			font-size: 16px;
+			font-weight: bold;
+		}
+	}
+
+	img {
+		width: 15%;
+	}
+} // ========== end about section ==========
+
+
+
+// =====================================
+// ========== reviews section ==========
+.reviews {
+	padding-top: 60px;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 14px;
+	line-height: 30px;
+	color: $darkGrey;
+
+	h2 {
+		margin: 0;
+		font-size: 24px;
+		line-height: 30px;	
+		color: $black;
+	}
+
+	.reviews-authorBox-review {
+		margin: 0;
+		margin-top: 29px;	
+	}
+	.reviews-authorBox-author {
+		margin: 0;
+		margin-top: 15px;
+		font-family: verdana, arial, sans-serif;
+		font-weight: bold;
+		line-height: 24px;
+		color: $black;
+	}
+	.reviews-authorBox-authorInstagram {
+
+	}
+
+	.reviews-arrowBox {
+		display: flex;
+		justify-content: space-around;
+		margin: 0 auto;
+	}
+
+	.reviews-arrowLeft,
+	.reviews-arrowRight {
+		box-sizing: border-box;
+		display: block;
+		border: 1px solid $lightGrey;
+		background-color: $white;
+		margin: 0px;
+		margin-top: 30px;
+		padding: 12px 42px;
+		width: 140px;
+
+		img {
+			width: 100%;
+		}
+	}
+
+	.reviews-btn {
+		box-sizing: border-box;
+		display:block;
+		border: 2px solid $darkGrey;
+
+		margin: 0px;
+		margin-top: 35px;
+		margin-bottom: 45px;
+		padding-top: 16px;
+		padding-bottom: 16px;
+
+		text-align: center;
+		text-transform: uppercase;
+		font-family: 'Open Sans', sans-serif;
+		font-size: 16px;
+		line-height: 16px;
+		font-weight: bold;
+		color: $darkGrey;
+	}
+}
+.reviews::after {
+	content: url("../img/zigzagLine.svg");
+	width: 100%;
+} // ========== end reviews section ==========
+
+
+
+// ======================================
+// ========== contacts section ==========
+.contacts {
+	padding-top: 40px;
+	padding-bottom: 40px;
+
+	h2 {
+		margin: 0px;
+		font-size: 24px;
+		line-height: 30px;
+		font-weight: bold;
+	}
+
+	.contacts-addressTable {
+		margin-top: 35px;
+		font-size: 14px;
+		line-height: 30px;
+		color: $darkGrey;
+		width: 100%;
+		font-family: 'Open Sans', sans-serif;
+
+		td {
+			padding-bottom: 12px;
+			padding-top: 14px;
+			vertical-align: initial;
+		}
+		td:nth-of-type(2) {
+			padding-left: 10%;
+		}
+	}
+
+	.contacts-map {
+		background-image: url("../img/contacts/map-tablet.jpg");
+		background-repeat: no-repeat;
+		background-position: center;
+
+		min-height: 460px;
+		max-width: 100%;
+		margin: 0 auto;
+	}
+
+	.contacts-btn {
+		box-sizing: border-box;
+		display:block;
+		border: 2px solid $darkGrey;
+
+		margin: 0px;
+		margin-top: 35px;
+		padding-top: 16px;
+		padding-bottom: 16px;
+
+		text-align: center;
+		text-transform: uppercase;
+		font-family: 'Open Sans', sans-serif;
+		font-size: 16px;
+		line-height: 16px;
+		font-weight: bold;
+		color: $darkGrey;
+	}
+} // ========== end contacts section ==========
+
+
+
+// ============================
+// ========== footer ==========
+footer {
+	background-color: #f1f1f1;
+
+	.social,
+	.htmlAcademy {
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+		margin: 0 auto;
+		font-size: 18px;
+		font-weight: bold;
+		max-width: 200px;
+	}
+	.social {
+		max-width: 170px;
+	}
+	.htmlacademy {
+		padding-top: 25px;
+		padding-bottom: 25px;
+	}
+
+	img {
+		min-width: 23px;
+	}
+	.footer-htmlacademyImg {
+		max-width: 28px;
+	}
+	.footer-facebookImg {
+		max-height: 30px;
+	}
+
+	.border_wrapper {
+		padding-top: 25px;
+		padding-bottom: 25px;
+		border-bottom: 1px solid #e5e5e5;
+	}
+} // ========== end footer ==========
