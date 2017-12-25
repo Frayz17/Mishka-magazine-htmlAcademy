@@ -19,6 +19,10 @@ a {
   margin: 0 auto; }
   .navigationPanel .navigationPanel-logoToogleBox {
     border-bottom: 1px solid #ececec; }
+  .navigationPanel .navigationPanel-logoToogleBox:hover .navigationPanel-logo {
+    opacity: 0.6; }
+  .navigationPanel .navigationPanel-logoToogleBox:active .navigationPanel-logo {
+    opacity: 0.3; }
   .navigationPanel .navigationPanel-toogle {
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
@@ -388,11 +392,24 @@ a {
     background-color: #ffffff;
     margin: 0px;
     margin-top: 30px;
-    padding: 12px 42px;
-    width: 140px; }
-    .reviews .reviews-arrowLeft img,
-    .reviews .reviews-arrowRight img {
-      width: 100%; }
+    width: 150px;
+    height: 52px;
+    background-position: center;
+    background-repeat: no-repeat;
+    -webkit-background-size: 45% 45%;
+            background-size: 45%; }
+  .reviews .reviews-arrowLeft {
+    background-image: url("../img/reviews/arrow-left.svg"); }
+  .reviews .reviews-arrowRight {
+    background-image: url("../img/reviews/arrow-right.svg"); }
+  .reviews .reviews-arrowLeft:hover {
+    opacity: 0.6; }
+  .reviews .reviews-arrowLeft:active {
+    opacity: 0.3; }
+  .reviews .reviews-arrowRight:hover {
+    opacity: 0.6; }
+  .reviews .reviews-arrowRight:active {
+    opacity: 0.3; }
   .reviews .reviews-btn {
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
@@ -410,6 +427,12 @@ a {
     line-height: 16px;
     font-weight: bold;
     color: #444444; }
+  .reviews .reviews-btn:hover {
+    background-color: #444444;
+    color: #ffffff; }
+  .reviews .reviews-btn:active {
+    background-color: #444444;
+    color: rgba(255, 255, 255, 0.3); }
 
 .reviews::after {
   content: url("../img/zigzagLine.svg");
@@ -436,6 +459,15 @@ a {
       vertical-align: initial; }
     .contacts .contacts-addressTable td:nth-of-type(2) {
       padding-left: 10%; }
+  .contacts .contacts-email {
+    text-decoration: underline;
+    -webkit-text-decoration-color: #63d1b2;
+            text-decoration-color: #63d1b2;
+    cursor: pointer; }
+  .contacts .contacts-email:hover {
+    color: #63d1b2; }
+  .contacts .contacts-email:active {
+    opacity: 0.3; }
   .contacts .contacts-map {
     background-image: url("../img/contacts/map-tablet.jpg");
     background-repeat: no-repeat;
@@ -459,9 +491,19 @@ a {
     line-height: 16px;
     font-weight: bold;
     color: #444444; }
+  .contacts .contacts-btn:hover {
+    background-color: #444444;
+    color: #ffffff; }
+  .contacts .contacts-btn:active {
+    background-color: #444444;
+    color: rgba(255, 255, 255, 0.3); }
 
 footer {
   background-color: #f1f1f1; }
+  footer .border_wrapper {
+    padding-top: 25px;
+    padding-bottom: 25px;
+    border-bottom: 1px solid #e5e5e5; }
   footer .social,
   footer .htmlAcademy {
     display: -webkit-box;
@@ -490,7 +532,19 @@ footer {
     max-width: 28px; }
   footer .footer-facebookImg {
     max-height: 30px; }
-  footer .border_wrapper {
-    padding-top: 25px;
-    padding-bottom: 25px;
-    border-bottom: 1px solid #e5e5e5; }
+  footer .footer-instagramImg:hover {
+    opacity: 0.6; }
+  footer .footer-instagramImg:active {
+    opacity: 0.3; }
+  footer .footer-facebookImg:hover {
+    opacity: 0.6; }
+  footer .footer-facebookImg:active {
+    opacity: 0.3; }
+  footer .footer-twitterImg:hover {
+    opacity: 0.6; }
+  footer .footer-twitterImg:active {
+    opacity: 0.3; }
+  footer .htmlAcademy:hover {
+    opacity: 0.6; }
+  footer .htmlAcademy:active {
+    opacity: 0.3; }
