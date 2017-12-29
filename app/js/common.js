@@ -15,6 +15,6 @@ function navToogleFunction() {
 }
 
 
-document.getElementById("navigationPanel-toogle_id").addEventListener("click", function() {
+document.getElementById("hamburger_id").addEventListener("click", function() {
 	navToogleFunction();
 });

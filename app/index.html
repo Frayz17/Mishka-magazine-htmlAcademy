@@ -20,10 +20,13 @@
       <div class="navigationPanel-toogle" id="navigationPanel-toogle_id">
 
         <a class="navigationPanel-logo" href="#">
-          <img src="img/navigationPanel/logo.svg" alt="logo" height="35px" width="86px">
+          <picture>
+            <source media="(min-width: 768px)" srcset="img/navigationPanel/logo_tablet.svg">
+            <img src="img/navigationPanel/logo.svg" alt="logo" height="35px" width="86px">
+          </picture>          
         </a>
 
-        <div class="hamburger">
+        <div id="hamburger_id" class="hamburger">
           <div id="hamburger-barBox_id" class="hamburger-barBox">
             <div class="bar1"></div>
             <div class="bar2"></div>
@@ -36,20 +39,22 @@
 
     <nav class="navigationPanel-navigation hidden" id="navigationPanel-nav_id">
       <ul class="">
-        <li class="">
+        <li class="navigationPanel-navigation-catalog">
           <a class="" href="#"><p>Каталог товаров</p></a>
         </li>
-        <li class="">
+        <li class="navigationPanel-navigation-knittingOrder">
           <a class="" href="#"><p>Вязание на заказ</p></a>
         </li>
-        <li class="">
-          <a href="#"><p class="navigationPanel-navigation-search">Поиск по сайту</p></a>
+        <li class="navigationPanel-navigation-search">
+          <a href="#"><p class="navigationPanel-navigation-search-p">Поиск по сайту</p></a>
         </li>
-        <li class="">
-          <a href="#"><p class="navigationPanel-navigation-cart">Корзина: пока пуста</p></a>
+        <li class="navigationPanel-navigation-cart">
+          <a href="#"><p class="navigationPanel-navigation-cart-p">Корзина: пока пуста</p></a>
         </li>  
       </ul>  
     </nav>
+
+    <p class="navigationPanel-freeDelivery">Бесплатная доставка по России</p>
 
 </section>
 
@@ -85,31 +90,33 @@
       <h2>Вязаные корзинки</h2>
       <p>товар недели</p>
     </header>
-    
-    <p class="productWeek-description">Экологически чистая пряжа, ручная работа. Доступны в шести
-    расцветках, и трех размерах.</p>
 
-    <table class="productWeek-characteristicTable">
-      <tr>
-        <td>Цвет:</td>
-        <td>«Тиффани»/серый</td>
-      </tr>
-      <tr>
-        <td>Диаметр:</td>
-        <td>25 см</td>
-      </tr>
-      <tr>
-        <td>Высота:</td>
-        <td>25 см</td>
-      </tr>
-    </table>
+    <!-- <div class="productWeek-orderBox"> -->
+      <p class="productWeek-description">Экологически чистая пряжа, ручная работа. Доступны в шести
+      расцветках, и трех размерах.</p>
 
-    <img src="img/productWeek/knittedItem.jpg" alt="Knitted Item">
+      <table class="productWeek-characteristicTable">
+        <tr>
+          <td>Цвет:</td>
+          <td>«Тиффани»/серый</td>
+        </tr>
+        <tr>
+          <td>Диаметр:</td>
+          <td>25 см</td>
+        </tr>
+        <tr>
+          <td>Высота:</td>
+          <td>25 см</td>
+        </tr>
+      </table>
 
-    <div class="productWeek-order">      
-      <p>Цена: 990 руб.</p>
-      <a class="productWeek-order-btn">Заказать</a>
-    </div>
+      <img src="img/productWeek/knittedItem.jpg" alt="Knitted Item">
+
+      <div class="productWeek-order">      
+        <p>Цена: 990 руб.</p>
+        <a class="productWeek-order-btn">Заказать</a>
+      </div>
+    <!-- </div> -->
 
   </div>
 </section>
