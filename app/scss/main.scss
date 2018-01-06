@@ -219,6 +219,11 @@ a {
 		}
 	}
 
+	img {
+		width: 112px;
+		height: auto;
+	}
+
   // navigation list styling for tablet version -----
 	.navigationPanel-navigation {
 
@@ -625,6 +630,45 @@ a {
 	img {
 		width: 15%;
 	}
+} 
+
+
+// ---------- tablet version about section ----------
+@media only screen and (min-width: 768px) {
+.about {
+
+	.container {
+    padding: 0 50px;
+    max-width: 100%;
+   	padding-bottom: 80px;
+	}
+
+	h2 {
+		font-size: 40px;
+		line-height: 50px;
+	}
+
+	.about-pointsBox {
+		display: flex;
+		justify-content: space-around;
+		// margin-top: 15px;
+	}
+
+	.about-pointsBox-leftColumn {
+    padding-right: 30px;
+    box-sizing: border-box;
+	}
+
+	.about-point {
+		margin-top: 55px;
+	}
+
+	img {
+		width: 13%;
+		height: 40px;
+	}
+
+}
 } // ========== end about section ==========
 
 
@@ -736,6 +780,74 @@ a {
 	content: url("../img/zigzagLine.svg");
 	width: 100%;
 } // ========== end reviews section ==========
+
+
+// ---------- tablet version reviews section ----------
+@media only screen and (min-width: 768px) {
+.reviews {
+	padding-top: 80px;
+
+  background-image: url("../img/reviews/background.jpg");
+  background-repeat: no-repeat;
+  background-position: top left;
+
+	.container {
+		padding: 0 50px;
+    padding-bottom: 160px;
+    max-width: unset;
+
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+
+    position: relative;
+	}
+	
+	h2 {
+		order: 1;
+		font-family: verdana, arial, sans-serif;
+		font-size: 40px;
+		line-height: 50px;
+	}
+
+	.reviews-authorBox {
+		margin: 0px;
+		margin-top: 55px;
+    order: 3;
+	}
+
+	.reviews-authorBox-review {
+		margin: 0px;
+	}
+
+	.reviews-authorBox-author {
+		margin-top: 35px;
+	}
+
+	.reviews-arrowBox {
+		position: absolute; 
+		bottom: 163;
+    right: 50;
+	}
+
+	.reviews-arrowLeft,
+	.reviews-arrowRight {
+		padding: 0;
+		margin: 0;
+		width: 80px;
+		background-size: 70%;
+		border: none;
+	}
+
+	.reviews-btn {
+		order: 2;
+		margin: 0;
+		padding: 15px 40px;
+	}
+
+}
+}
 
 
 

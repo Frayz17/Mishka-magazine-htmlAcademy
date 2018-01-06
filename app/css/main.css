@@ -191,6 +191,9 @@ a {
         padding: 0; }
       .navigationPanel .navigationPanel-logoToogleBox .hamburger {
         display: none; }
+    .navigationPanel img {
+      width: 112px;
+      height: auto; }
     .navigationPanel .navigationPanel-navigation ul {
       -webkit-box-orient: horizontal;
       -webkit-box-direction: normal;
@@ -569,6 +572,32 @@ a {
   .about img {
     width: 15%; }
 
+@media only screen and (min-width: 768px) {
+  .about .container {
+    padding: 0 50px;
+    max-width: 100%;
+    padding-bottom: 80px; }
+  .about h2 {
+    font-size: 40px;
+    line-height: 50px; }
+  .about .about-pointsBox {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-justify-content: space-around;
+        -ms-flex-pack: distribute;
+            justify-content: space-around; }
+  .about .about-pointsBox-leftColumn {
+    padding-right: 30px;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box; }
+  .about .about-point {
+    margin-top: 55px; }
+  .about img {
+    width: 13%;
+    height: 40px; } }
+
 .reviews {
   padding-top: 60px;
   font-family: 'Open Sans', sans-serif;
@@ -653,6 +682,71 @@ a {
 .reviews::after {
   content: url("../img/zigzagLine.svg");
   width: 100%; }
+
+@media only screen and (min-width: 768px) {
+  .reviews {
+    padding-top: 80px;
+    background-image: url("../img/reviews/background.jpg");
+    background-repeat: no-repeat;
+    background-position: top left; }
+    .reviews .container {
+      padding: 0 50px;
+      padding-bottom: 160px;
+      max-width: unset;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-flex-wrap: wrap;
+          -ms-flex-wrap: wrap;
+              flex-wrap: wrap;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+          -ms-flex-align: center;
+              align-items: center;
+      -webkit-box-pack: justify;
+      -webkit-justify-content: space-between;
+          -ms-flex-pack: justify;
+              justify-content: space-between;
+      position: relative; }
+    .reviews h2 {
+      -webkit-box-ordinal-group: 2;
+      -webkit-order: 1;
+          -ms-flex-order: 1;
+              order: 1;
+      font-family: verdana, arial, sans-serif;
+      font-size: 40px;
+      line-height: 50px; }
+    .reviews .reviews-authorBox {
+      margin: 0px;
+      margin-top: 55px;
+      -webkit-box-ordinal-group: 4;
+      -webkit-order: 3;
+          -ms-flex-order: 3;
+              order: 3; }
+    .reviews .reviews-authorBox-review {
+      margin: 0px; }
+    .reviews .reviews-authorBox-author {
+      margin-top: 35px; }
+    .reviews .reviews-arrowBox {
+      position: absolute;
+      bottom: 163;
+      right: 50; }
+    .reviews .reviews-arrowLeft,
+    .reviews .reviews-arrowRight {
+      padding: 0;
+      margin: 0;
+      width: 80px;
+      -webkit-background-size: 70% 70%;
+              background-size: 70%;
+      border: none; }
+    .reviews .reviews-btn {
+      -webkit-box-ordinal-group: 3;
+      -webkit-order: 2;
+          -ms-flex-order: 2;
+              order: 2;
+      margin: 0;
+      padding: 15px 40px; } }
 
 .contacts {
   padding-top: 40px;
