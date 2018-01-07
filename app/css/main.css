@@ -593,7 +593,8 @@ a {
     -webkit-box-sizing: border-box;
             box-sizing: border-box; }
   .about .about-point {
-    margin-top: 55px; }
+    margin-top: 50px;
+    height: 100px; }
   .about img {
     width: 13%;
     height: 40px; } }
@@ -756,27 +757,34 @@ a {
     font-size: 24px;
     line-height: 30px;
     font-weight: bold; }
-  .contacts .contacts-addressTable {
+  .contacts .contacts-informationBox {
     margin-top: 35px;
     font-size: 14px;
     line-height: 30px;
     color: #444444;
     width: 100%;
     font-family: 'Open Sans', sans-serif; }
-    .contacts .contacts-addressTable td {
-      padding-bottom: 12px;
-      padding-top: 14px;
-      vertical-align: initial; }
-    .contacts .contacts-addressTable td:nth-of-type(2) {
+    .contacts .contacts-informationBox p {
+      margin: 0; }
+    .contacts .contacts-informationBox p:nth-of-type(2) {
       padding-left: 10%; }
-  .contacts .contacts-email {
+  .contacts .contacts-information {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+        -ms-flex-pack: start;
+            justify-content: flex-start; }
+  .contacts .email {
     text-decoration: underline;
     -webkit-text-decoration-color: #63d1b2;
             text-decoration-color: #63d1b2;
     cursor: pointer; }
-  .contacts .contacts-email:hover {
+  .contacts .email:hover {
     color: #63d1b2; }
-  .contacts .contacts-email:active {
+  .contacts .email:active {
     opacity: 0.3; }
   .contacts .contacts-map {
     background-image: url("../img/contacts/map-tablet.jpg");
@@ -808,8 +816,55 @@ a {
     background-color: #444444;
     color: rgba(255, 255, 255, 0.3); }
 
+@media only screen and (min-width: 768px) {
+  .contacts {
+    position: relative; }
+    .contacts::before {
+      content: url("../img/contacts/flag.svg");
+      position: absolute;
+      height: 80px;
+      width: 50px;
+      top: 25px;
+      right: 50px; }
+    .contacts .container {
+      max-width: unset;
+      padding: 0 50px; }
+    .contacts h2 {
+      margin-bottom: 65px;
+      font-size: 40px;
+      line-height: 50px; }
+    .contacts .contacts-informationBox {
+      margin: 0;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: justify;
+      -webkit-justify-content: space-between;
+          -ms-flex-pack: justify;
+              justify-content: space-between;
+      margin-bottom: 60px; }
+    .contacts .contacts-information {
+      -webkit-box-sizing: border-box;
+              box-sizing: border-box;
+      max-width: 50%;
+      padding-right: 11%;
+      -webkit-box-pack: justify;
+      -webkit-justify-content: space-between;
+          -ms-flex-pack: justify;
+              justify-content: space-between; }
+    .contacts p {
+      margin: 0; }
+    .contacts .contacts-map {
+      margin-bottom: 55px; }
+    .contacts .contacts-btn {
+      width: 230px;
+      margin: 0 auto; } }
+
 footer {
   background-color: #f1f1f1; }
+  footer .footer-logo {
+    display: none; }
   footer .border_wrapper {
     padding-top: 25px;
     padding-bottom: 25px;
@@ -858,3 +913,35 @@ footer {
     opacity: 0.6; }
   footer .htmlAcademy:active {
     opacity: 0.3; }
+
+@media only screen and (min-width: 768px) {
+  footer .container {
+    max-width: unset;
+    padding: 0 50px;
+    padding-top: 50px;
+    padding-bottom: 55px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center; }
+  footer .footer-logo {
+    display: block;
+    width: 100px;
+    padding-right: 50px; }
+  footer .socialImg {
+    margin-left: 15px;
+    margin-right: 15px; }
+  footer .htmlAcademy,
+  footer .border_wrapper {
+    margin: 0;
+    padding: 0; }
+  footer .footer-htmlacademyImg {
+    margin-left: 20px; } }

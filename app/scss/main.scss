@@ -660,7 +660,8 @@ a {
 	}
 
 	.about-point {
-		margin-top: 55px;
+    margin-top: 50px;
+    height: 100px;
 	}
 
 	img {
@@ -864,7 +865,7 @@ a {
 		font-weight: bold;
 	}
 
-	.contacts-addressTable {
+	.contacts-informationBox {
 		margin-top: 35px;
 		font-size: 14px;
 		line-height: 30px;
@@ -872,24 +873,28 @@ a {
 		width: 100%;
 		font-family: 'Open Sans', sans-serif;
 
-		td {
-			padding-bottom: 12px;
-			padding-top: 14px;
-			vertical-align: initial;
+		p {
+			margin: 0;
 		}
-		td:nth-of-type(2) {
+		p:nth-of-type(2) {
 			padding-left: 10%;
 		}
 	}
-	.contacts-email {
+
+	.contacts-information {
+		display: flex;
+		justify-content: flex-start;
+	}
+
+	.email {
     text-decoration: underline;
     text-decoration-color: $turquoise;
     cursor: pointer;
 	}
-	.contacts-email:hover {
+	.email:hover {
     color: $turquoise;
 	}
-	.contacts-email:active {
+	.email:active {
     opacity: 0.3;
 	}
 
@@ -930,6 +935,62 @@ a {
 		color: rgba(255,255,255, 0.3);
 	}
 	
+}
+
+
+// ---------- tablet version reviews section ----------
+@media only screen and (min-width: 768px) {
+.contacts {
+	position: relative;
+
+	&::before {
+		content: url("../img/contacts/flag.svg");
+		position: absolute;
+		height: 80px;
+		width: 50px;
+		top: 25px;
+  	right: 50px;
+	}
+
+	.container {
+		max-width: unset;
+		padding: 0 50px;
+	}
+
+	h2 {
+		margin-bottom: 65px;
+		font-size: 40px;
+		line-height: 50px;
+	}
+
+	.contacts-informationBox {
+		margin: 0;
+		display: flex;
+    justify-content: space-between;
+    margin-bottom: 60px;
+	}
+
+	.contacts-information {
+		box-sizing: border-box;
+		max-width: 50%;
+    padding-right: 11%;
+    justify-content: space-between;
+	}
+
+	p {
+		margin: 0;
+	}
+
+	.contacts-map {
+		margin-bottom: 55px;
+	}
+
+	.contacts-btn {
+		width: 230px;
+    margin: 0 auto;
+	}
+
+}
 } // ========== end contacts section ==========
 
 
@@ -938,6 +999,10 @@ a {
 // ========== footer ==========
 footer {
 	background-color: #f1f1f1;
+
+	.footer-logo {
+		display: none;
+	}
 
 	.border_wrapper {
 		padding-top: 25px;
@@ -1002,4 +1067,43 @@ footer {
 		opacity: 0.3;
 	} // end hower active behavior style ----------
 
+}
+
+
+// ---------- tablet version reviews section ----------
+@media only screen and (min-width: 768px) {
+footer {
+
+	.container {
+		max-width: unset;
+		padding: 0 50px;
+		padding-top: 50px;
+		padding-bottom: 55px;		
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	.footer-logo {
+		display: block;
+		width: 100px;
+		padding-right: 50px;
+	}
+
+	.socialImg {
+		margin-left: 15px;
+		margin-right: 15px;
+	}
+
+	.htmlAcademy,
+	.border_wrapper {
+		margin: 0;
+		padding: 0;
+	}
+
+	.footer-htmlacademyImg {
+		margin-left: 20px;
+	}
+
+}
 } // ========== end footer ==========
