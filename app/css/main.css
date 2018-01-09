@@ -149,6 +149,9 @@ a {
     position: absolute;
     top: 4px;
     left: 15px; }
+  .navigationPanel .navigationPanel-navigation .navigationPanel-navigation-newIncome,
+  .navigationPanel .navigationPanel-navigation .navigationPanel-navigation-selOut {
+    display: none; }
   .navigationPanel .navigationPanel-navigation li:hover p {
     opacity: 0.6; }
   .navigationPanel .navigationPanel-navigation li:hover .navigationPanel-navigation-search-p::before {
@@ -259,8 +262,65 @@ a {
       display: -ms-flexbox;
       display: flex; } }
 
+@media only screen and (min-width: 1150px) {
+  .navigationPanel .navigationPanel-logoToogleBox {
+    position: absolute;
+    top: 5px;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+        transform: translateX(-50%); }
+  .navigationPanel img {
+    width: 150px; }
+  .navigationPanel .navigationPanel-navigation {
+    width: 100%; }
+    .navigationPanel .navigationPanel-navigation ul {
+      width: 100%; }
+    .navigationPanel .navigationPanel-navigation li {
+      min-height: 90px; }
+    .navigationPanel .navigationPanel-navigation .navigationPanel-navigation-catalog,
+    .navigationPanel .navigationPanel-navigation .navigationPanel-navigation-knittingOrder {
+      position: static;
+      width: 100%;
+      text-align: center;
+      padding: 0; }
+      .navigationPanel .navigationPanel-navigation .navigationPanel-navigation-catalog p,
+      .navigationPanel .navigationPanel-navigation .navigationPanel-navigation-knittingOrder p {
+        padding: 0; }
+    .navigationPanel .navigationPanel-navigation .navigationPanel-navigation-catalog {
+      width: 190px;
+      text-align: left;
+      border-right: 1px solid #ececec; }
+    .navigationPanel .navigationPanel-navigation .navigationPanel-navigation-knittingOrder {
+      width: 230px; }
+    .navigationPanel .navigationPanel-navigation .navigationPanel-navigation-search {
+      margin-left: auto; }
+    .navigationPanel .navigationPanel-navigation .navigationPanel-navigation-cart {
+      width: 270px;
+      text-align: right; }
+    .navigationPanel .navigationPanel-navigation .navigationPanel-navigation-cart-p::before {
+      left: 22px; }
+    .navigationPanel .navigationPanel-navigation .navigationPanel-navigation-cart-p {
+      margin-right: 0; }
+    .navigationPanel .navigationPanel-navigation .navigationPanel-navigation-newIncome,
+    .navigationPanel .navigationPanel-navigation .navigationPanel-navigation-selOut {
+      display: block;
+      position: absolute;
+      top: 108px;
+      width: auto;
+      z-index: 1;
+      font-size: 14px;
+      line-height: 24px; }
+      .navigationPanel .navigationPanel-navigation .navigationPanel-navigation-newIncome p,
+      .navigationPanel .navigationPanel-navigation .navigationPanel-navigation-selOut p {
+        padding: 0; }
+    .navigationPanel .navigationPanel-navigation .navigationPanel-navigation-newIncome {
+      left: 50px; }
+    .navigationPanel .navigationPanel-navigation .navigationPanel-navigation-selOut {
+      left: 285; } }
+
 .handMade {
-  background-color: #ececec;
+  background-color: #f9f9f9;
   background-image: url("../img/handmade/bg_mobile.jpg");
   background-repeat: no-repeat;
   background-position: center top;
@@ -357,6 +417,15 @@ a {
     position: absolute;
     bottom: -10px;
     width: 100%; } }
+
+@media only screen and (min-width: 1150px) {
+  .handMade .handMade-title {
+    font-size: 50px;
+    max-width: 630px; }
+  .handMade .handMadeProduct-productBox-item {
+    padding-bottom: 25px; }
+  .handMade::after {
+    bottom: -15px; } }
 
 .productWeek {
   padding-top: 30px;
@@ -555,6 +624,50 @@ a {
       max-width: 50%;
       margin: 0; } }
 
+@media only screen and (min-width: 1150px) {
+  .productWeek {
+    position: relative;
+    padding-top: 70px; }
+    .productWeek header {
+      position: absolute;
+      top: 135px;
+      left: 4%;
+      z-index: 1; }
+      .productWeek header h2 {
+        -webkit-box-ordinal-group: 3;
+        -webkit-order: 2;
+            -ms-flex-order: 2;
+                order: 2;
+        font-size: 50px; }
+      .productWeek header p {
+        -webkit-box-ordinal-group: 2;
+        -webkit-order: 1;
+            -ms-flex-order: 1;
+                order: 1;
+        margin-right: 40; }
+    .productWeek .container {
+      max-width: unset;
+      -webkit-box-pack: right;
+      -webkit-justify-content: right;
+          -ms-flex-pack: right;
+              justify-content: right;
+      -webkit-box-align: end;
+      -webkit-align-items: flex-end;
+          -ms-flex-align: end;
+              align-items: flex-end;
+      padding-bottom: 70px; }
+    .productWeek .productWeek-orderBox {
+      width: 33%;
+      margin-left: auto;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+          -ms-flex-align: center;
+              align-items: center;
+      min-height: 440px;
+      padding-right: 50px;
+      -webkit-box-sizing: border-box;
+              box-sizing: border-box; } }
+
 .about {
   padding-top: 30px; }
   .about h2 {
@@ -598,6 +711,22 @@ a {
   .about img {
     width: 13%;
     height: 40px; } }
+
+@media only screen and (min-width: 1150px) {
+  .about {
+    padding-top: 70px; }
+    .about .container {
+      max-width: 66%;
+      padding-bottom: 90px; }
+    .about h2 {
+      font-size: 50px; }
+    .about .about-pointsBox-leftColumn,
+    .about .about-pointsBox-rightColumn {
+      padding-right: 100px;
+      -webkit-box-sizing: border-box;
+              box-sizing: border-box; }
+    .about .about-point p {
+      font-size: 20px; } }
 
 .reviews {
   padding-top: 60px;
@@ -748,6 +877,16 @@ a {
               order: 2;
       margin: 0;
       padding: 15px 40px; } }
+
+@media only screen and (min-width: 1150px) {
+  .reviews {
+    background-position: 50px top; }
+    .reviews .container {
+      padding-left: 16%; }
+    .reviews h2 {
+      font-size: 50px; }
+    .reviews .reviews-authorBox {
+      padding-right: 20%; } }
 
 .contacts {
   padding-top: 40px;

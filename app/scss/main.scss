@@ -156,11 +156,17 @@ a {
 			top: 4px;
 			left: 15px;
 		}
+
 		.navigationPanel-navigation-cart-p::before {
 			content: url("../img/navigationPanel/cart.png");
 			position: absolute;
 			top: 4px;
 			left: 15px;
+		}
+
+		.navigationPanel-navigation-newIncome,
+		.navigationPanel-navigation-selOut {
+			display: none;
 		}
 	
 		li:hover {
@@ -304,6 +310,100 @@ a {
 	}
 }
 
+}
+
+
+// ---------- desktop version navigation panel styling ----------
+@media only screen and (min-width: 1150px) {
+.navigationPanel {
+
+	.navigationPanel-logoToogleBox {
+		position: absolute;
+		top: 5px;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+	}
+
+	img {
+		width: 150px;
+	}
+
+	.navigationPanel-navigation {
+		width: 100%;
+
+		ul {
+			width: 100%;
+		}
+
+		li {
+			min-height: 90px;
+		}
+
+		.navigationPanel-navigation-catalog,
+		.navigationPanel-navigation-knittingOrder {
+			position: static;
+	    width: 100%;
+	    text-align: center;
+	    padding: 0;
+	    
+	    p {
+				padding: 0;
+			}
+		}
+
+		.navigationPanel-navigation-catalog {
+			width: 190px;
+			text-align: left;
+			border-right: 1px solid $lightGrey;
+		}
+		.navigationPanel-navigation-knittingOrder {
+			width: 230px;
+		}
+
+		.navigationPanel-navigation-search {
+			margin-left: auto;
+		}
+
+		.navigationPanel-navigation-cart {
+			width: 270px;
+			text-align: right;
+		}
+
+		.navigationPanel-navigation-cart-p::before {
+			left: 22px;
+		}
+
+		.navigationPanel-navigation-cart-p {
+			margin-right: 0;
+		}
+
+		.navigationPanel-navigation-newIncome,
+		.navigationPanel-navigation-selOut {
+			display: block;
+			position: absolute;
+			top: 108px;
+			width: auto;
+			z-index: 1;
+			font-size: 14px;
+			line-height: 24px;
+			p {
+				padding: 0;
+			}
+		}
+
+		.navigationPanel-navigation-newIncome {		
+			left: 50px;
+		}
+
+		.navigationPanel-navigation-selOut {
+	    left: 285;
+  	}
+
+	}
+
+
+}
 } // ========== end navigation panel section ==========
 
 
@@ -311,7 +411,7 @@ a {
 // =======================================
 // ========== hand made section ==========
 .handMade {
-	background-color: $lightGrey;
+	background-color: #f9f9f9;
 	background-image: url("../img/handmade/bg_mobile.jpg");
 	background-repeat: no-repeat;
 	background-position: center top;
@@ -413,7 +513,34 @@ a {
 	width: 100%;
 }
 
-} // ========== end hand made section ==========
+} 
+
+
+// ---------- desktop version hand made styling ----------
+@media only screen and (min-width: 1150px) {
+.handMade {
+
+	.handMade-title {
+		font-size: 50px;
+		max-width: 630px;
+	}
+
+	// .handMadeProduct-productBox {
+	// 	max-width: 1150px;
+	// 	margin: 0 auto;
+	// }
+
+	.handMadeProduct-productBox-item {
+		padding-bottom: 25px;
+	}
+
+}
+
+.handMade::after {
+	bottom: -15px;
+}
+
+}// ========== end hand made section ==========
 
 
 
@@ -601,7 +728,54 @@ a {
 	}
 
 }
+}
+
+
+// ---------- desktop version product week section ----------
+@media only screen and (min-width: 1150px) {
+.productWeek {
+	position: relative;
+	padding-top: 70px;
+
+	header {
+		position: absolute;
+		top: 135px;
+    left: 4%;
+    z-index: 1;
+
+    h2 {
+    	order: 2;
+    	font-size: 50px;
+    }
+
+		p {
+      order: 1;
+    	margin-right: 40;			
+		}
+
+	}
+
+	.container {
+		max-width: unset;
+    justify-content: right;
+    align-items: flex-end;
+    padding-bottom: 70px;
+	}
+
+	.productWeek-orderBox {
+    width: 33%;
+    margin-left: auto;
+    align-items: center;
+    min-height: 440px;
+    padding-right: 50px;
+    box-sizing: border-box;
+	}
+
+
+
+}
 } // ========== end Product Week section ==========
+
 
 
 // ===================================
@@ -667,6 +841,36 @@ a {
 	img {
 		width: 13%;
 		height: 40px;
+	}
+
+}
+} 
+
+
+// ---------- tablet version about section ----------
+@media only screen and (min-width: 1150px) {
+.about {
+	padding-top: 70px;
+
+	.container {
+		max-width: 66%;
+		padding-bottom: 90px;
+	}
+
+	h2 {
+		font-size: 50px;
+	}
+
+	.about-pointsBox-leftColumn,
+	.about-pointsBox-rightColumn {
+		padding-right: 100px;
+    box-sizing: border-box;
+	}
+
+	.about-point {
+		p {
+			font-size: 20px;
+		}
 	}
 
 }
@@ -845,6 +1049,27 @@ a {
 		order: 2;
 		margin: 0;
 		padding: 15px 40px;
+	}
+
+}
+}
+
+
+// ---------- desktop version reviews section ----------
+@media only screen and (min-width: 1150px) {
+.reviews {
+	background-position: 50px top;
+
+	.container {
+		padding-left: 16%;
+	}
+
+	h2 {
+		font-size: 50px;
+	}
+
+	.reviews-authorBox {
+		padding-right: 20%;
 	}
 
 }
