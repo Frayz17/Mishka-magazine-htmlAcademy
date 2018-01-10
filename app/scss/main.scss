@@ -488,7 +488,7 @@ a {
 
 .handMade {
 	max-width: 100%;
-	background-image: url("../img/handmade/bg_tablet.jpg");
+	background-image: url("../img/handmade/bg_tablet_handMade.jpg");
 	padding-top: 155px;
 	margin: 0;
 	position: relative;
@@ -1039,7 +1039,7 @@ a {
     position: relative;
 
     &::before {
-    	content: url("../img/reviews/background.jpg");
+    	content: url("../img/reviews/Background_reviews.jpg");
     	position: absolute;
     	z-index: -1;
 	    top: -185;
