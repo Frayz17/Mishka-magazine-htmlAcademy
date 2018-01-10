@@ -39,6 +39,13 @@ a {
 		border-bottom: 1px solid $lightGrey;
 	}
 
+	.navigationPanel-logo:hover {
+		opacity: 0.6;
+	}
+	.navigationPanel-logo:active {
+		opacity: 0.3;
+	}
+
 	.navigationPanel-toogle {
 		box-sizing: border-box;
 		position: relative;
@@ -316,6 +323,7 @@ a {
 // ---------- desktop version navigation panel styling ----------
 @media only screen and (min-width: 1150px) {
 .navigationPanel {
+	box-sizing: border-box;
 
 	.navigationPanel-logoToogleBox {
 		position: absolute;
@@ -519,16 +527,19 @@ a {
 // ---------- desktop version hand made styling ----------
 @media only screen and (min-width: 1150px) {
 .handMade {
+	box-sizing: border-box;
 
 	.handMade-title {
 		font-size: 50px;
 		max-width: 630px;
 	}
 
-	// .handMadeProduct-productBox {
-	// 	max-width: 1150px;
-	// 	margin: 0 auto;
-	// }
+	.handMadeProduct-productBox {
+		max-width: 1050px;
+		margin: 0 auto;
+		padding-left: 0;
+		padding-right: 0;
+	}
 
 	.handMadeProduct-productBox-item {
 		padding-bottom: 25px;
@@ -539,8 +550,7 @@ a {
 .handMade::after {
 	bottom: -15px;
 }
-
-}// ========== end hand made section ==========
+} // ========== end hand made section ==========
 
 
 
@@ -554,6 +564,7 @@ a {
 	align-items: center;
 
 	header {
+		padding: 0 10%;
 		font-weight: bold;
 		h2 {
 			margin: 0;
@@ -734,13 +745,20 @@ a {
 // ---------- desktop version product week section ----------
 @media only screen and (min-width: 1150px) {
 .productWeek {
+	box-sizing: border-box;
 	position: relative;
 	padding-top: 70px;
 
+	.desktopWrapper {
+		max-width: 1050px;
+		margin: 0 auto;
+		position: relative;
+	}
+
 	header {
 		position: absolute;
-		top: 135px;
-    left: 4%;
+		top: 30px;
+    left: 28px;
     z-index: 1;
 
     h2 {
@@ -851,10 +869,13 @@ a {
 @media only screen and (min-width: 1150px) {
 .about {
 	padding-top: 70px;
+	box-sizing: border-box;
 
 	.container {
-		max-width: 66%;
+		max-width: 700px;
+		margin: 0 auto;
 		padding-bottom: 90px;
+    padding-left: 120;
 	}
 
 	h2 {
@@ -863,7 +884,6 @@ a {
 
 	.about-pointsBox-leftColumn,
 	.about-pointsBox-rightColumn {
-		padding-right: 100px;
     box-sizing: border-box;
 	}
 
@@ -984,29 +1004,25 @@ a {
 .reviews::after {
 	content: url("../img/zigzagLine.svg");
 	width: 100%;
-} // ========== end reviews section ==========
+}
 
 
 // ---------- tablet version reviews section ----------
 @media only screen and (min-width: 768px) {
 .reviews {
 	padding-top: 80px;
-
-  background-image: url("../img/reviews/background.jpg");
-  background-repeat: no-repeat;
-  background-position: top left;
-
+	
 	.container {
 		padding: 0 50px;
     padding-bottom: 160px;
     max-width: unset;
+    position: relative;
 
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
 
-    position: relative;
 	}
 	
 	h2 {
@@ -1020,6 +1036,15 @@ a {
 		margin: 0px;
 		margin-top: 55px;
     order: 3;
+    position: relative;
+
+    &::before {
+    	content: url("../img/reviews/background.jpg");
+    	position: absolute;
+    	z-index: -1;
+	    top: -185;
+	    left: -50px;
+    }
 	}
 
 	.reviews-authorBox-review {
@@ -1059,9 +1084,11 @@ a {
 @media only screen and (min-width: 1150px) {
 .reviews {
 	background-position: 50px top;
+	box-sizing: border-box;
 
 	.container {
-		padding-left: 16%;
+		padding-left: 250px;
+		max-width: 830px;
 	}
 
 	h2 {
@@ -1070,10 +1097,15 @@ a {
 
 	.reviews-authorBox {
 		padding-right: 20%;
+
+ 		&::before {
+	    left: -175px;
+    }
+
 	}
 
 }
-}
+} // ========== end reviews section ==========
 
 
 
@@ -1081,7 +1113,8 @@ a {
 // ========== contacts section ==========
 .contacts {
 	padding-top: 40px;
-	padding-bottom: 40px;
+	padding-bottom: 140px;
+	position: relative;
 
 	h2 {
 		margin: 0px;
@@ -1092,6 +1125,7 @@ a {
 
 	.contacts-informationBox {
 		margin-top: 35px;
+		margin-bottom: 25px;
 		font-size: 14px;
 		line-height: 30px;
 		color: $darkGrey;
@@ -1124,13 +1158,8 @@ a {
 	}
 
 	.contacts-map {
-		background-image: url("../img/contacts/map-tablet.jpg");
-		background-repeat: no-repeat;
-		background-position: center;
-
 		min-height: 460px;
-		max-width: 100%;
-		margin: 0 auto;
+		width: 100%;
 	}
 
 	.contacts-btn {
@@ -1138,8 +1167,6 @@ a {
 		display:block;
 		border: 2px solid $darkGrey;
 
-		margin: 0px;
-		margin-top: 35px;
 		padding-top: 16px;
 		padding-bottom: 16px;
 
@@ -1150,6 +1177,15 @@ a {
 		line-height: 16px;
 		font-weight: bold;
 		color: $darkGrey;
+
+		position: absolute;
+    bottom: 50px;
+    display: block;
+    width: 80%;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+
 	}
 	.contacts-btn:hover {
 		background-color: $darkGrey;
@@ -1167,6 +1203,7 @@ a {
 @media only screen and (min-width: 768px) {
 .contacts {
 	position: relative;
+	padding-bottom: 100px;
 
 	&::before {
 		content: url("../img/contacts/flag.svg");
@@ -1216,7 +1253,72 @@ a {
 	}
 
 }
-} // ========== end contacts section ==========
+} 
+
+
+// ---------- tablet version reviews section ----------
+@media only screen and (min-width: 1150px) {
+.contacts {
+	box-sizing: border-box;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+
+  max-width: 1050px;
+	margin: 0 auto;
+
+  &::before {
+  	width: 50px;
+    top: 120px;
+    right: unset;
+    left: 90px;
+  }
+	
+	.container {
+		margin: 0;
+    display: flex;
+    flex-flow: column;
+    justify-content: flex-end;
+    width: 30%;
+    box-sizing: border-box;
+    padding: 0;
+	}
+
+	h2 {
+		font-size: 50px;
+		margin-bottom: 50px;
+	}
+
+	.contacts-informationBox {
+		flex-flow: column;
+		margin-bottom: 75px;
+		max-width: 300px;
+	}
+
+	.contacts-information:first-of-type {
+		margin-bottom: 20px;
+	}
+
+	.contacts-information {
+		justify-content: flex-start;
+		max-width: unset;
+	}
+
+	.contacts-map {
+		width: 50%;
+		margin: 0;
+	}
+
+	.contacts-btn {
+		position: static;
+		margin: 0;
+		-webkit-transform: unset;
+    -ms-transform: unset;
+    transform: unset;
+	}
+
+}
+}// ========== end contacts section ==========
 
 
 
@@ -1253,44 +1355,37 @@ footer {
 		padding-bottom: 25px;
 	}
 
-	img {
+	.socialImg {
 		min-width: 23px;
+
+		&:hover {
+			.socialIcon {
+				fill: turquoise;
+			}
+		}
+		&:active {
+			opacity: 0.3;
+		}
 	}
-	.footer-htmlacademyImg {
-		max-width: 28px;
-	}
+
 	.footer-facebookImg {
 		max-height: 30px;
 	}
 
-	// hower active behavior style ----------
-	.footer-instagramImg:hover {
+	.footer-htmlacademyImg {
+		max-width: 28px;
 		opacity: 0.6;
-	}
-	.footer-instagramImg:active {
-		opacity: 0.3;
-	}
-
-	.footer-facebookImg:hover {
-		opacity: 0.6;
-	}
-	.footer-facebookImg:active {
-		opacity: 0.3;
-	}
-
-	.footer-twitterImg:hover {
-		opacity: 0.6;
-	}
-	.footer-twitterImg:active {
-		opacity: 0.3;
 	}
 
 	.htmlAcademy:hover {
-		opacity: 0.6;
+		.footer-htmlacademyImg {
+			opacity: 1;
+		}
 	}
+
 	.htmlAcademy:active {
-		opacity: 0.3;
-	} // end hower active behavior style ----------
+			opacity: 0.3;
+	}
 
 }
 
@@ -1313,6 +1408,20 @@ footer {
 		display: block;
 		width: 100px;
 		padding-right: 50px;
+
+		&:hover {
+			.socialIcon {
+				fill: turquoise;
+			}
+		}
+
+		&:active {
+			opacity: 0.3;
+		}
+	}
+
+	.border_wrapper {
+		border-bottom: none;
 	}
 
 	.socialImg {
